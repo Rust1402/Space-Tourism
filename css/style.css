@@ -74,6 +74,7 @@ body{
     font-size: 18px;
     line-height: 21px;
     padding: 20px 45px;
+    margin-bottom: 20px;
 }
 
 .header{
@@ -113,7 +114,7 @@ body{
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #CB0E0E;
+    background-color: #F04B5F;
     transition: 0.2s;
     transform: scaleX(0);
 }
@@ -123,7 +124,6 @@ body{
     transform: scaleX(1);
 }
 
-
 .menu__link {
     text-decoration: uppercase;
     font-size: 18px;
@@ -132,7 +132,7 @@ body{
 }
 
 .menu__link:hover{
-    color:#CB0E0E;
+    color:#F04B5F;
 }
 
 .phone {
@@ -222,6 +222,10 @@ body{
 
 .about__content {
     width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .virgin {
@@ -257,7 +261,7 @@ body{
     font-size: 12px;
     line-height: 14px;
     font-weight: 400;
-    color: #036CCA;
+    color: #F34B16;
     margin-bottom: 30px;
     text-transform: uppercase;
 }
@@ -270,6 +274,7 @@ body{
 
 .about__content-text p{
     width: 165px;
+    margin-left: 20px;
 }
 
 .about__table {
@@ -298,7 +303,7 @@ body{
 }
 
 .about__table-td {
-    padding: 10px 30px 10px 0;
+    padding: 10px;
 }
 
 .about__table-td span {
@@ -409,7 +414,7 @@ foreignObject {
 }
 
 .special-offer__item-text span{
-    color: #CB0E0E;
+    color: #F04B5F;
 }
 
 .special-offer__old-price {
@@ -425,7 +430,7 @@ foreignObject {
     position: absolute;
     width: 68px;
     height: 1px;
-    background-color: #CB0E0E;
+    background-color: #F04B5F;
     top: 7px;
     right: 0;
     transform: rotate(15deg);
@@ -582,7 +587,8 @@ position: relative;
     font-family: 'sf-pro-display';
     font-size: 14px;
     line-height: 17px;
-    padding: 20px 0;
+    padding: 20px 0 20px 10px;
+    margin-left: 5px;
     width: 100%;
 }
 
