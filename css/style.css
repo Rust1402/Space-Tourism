@@ -34,6 +34,7 @@
 a{
     color:inherit;
     text-decoration: none;
+    position: relative;
 }
 
 button{
@@ -103,6 +104,25 @@ body{
 .menu__item {
     margin-right: 30px;
 }
+
+.menu__item a::before,
+.footer__menu-item a::before {
+    content: '';
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #CB0E0E;
+    transition: 0.2s;
+    transform: scaleX(0);
+}
+
+.menu__item a:hover:before,
+.footer__menu-item a:hover:before {
+    transform: scaleX(1);
+}
+
 
 .menu__link {
     text-decoration: uppercase;
