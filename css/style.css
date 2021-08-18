@@ -119,8 +119,8 @@ body{
     transform: scaleX(0);
 }
 
-.menu__item a:hover:before,
-.footer__menu-item a:hover:before {
+.menu__item a:hover::before,
+.footer__menu-item a:hover::before {
     transform: scaleX(1);
 }
 
