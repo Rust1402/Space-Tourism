@@ -98,15 +98,23 @@ body{
     padding: 75px 0 30px;
 }
 
+
+
+/* ---------------- */
 .menu__list {
     display: flex;
 }
 
-.menu__item {
+.menu.active {
+    top: 0;
+    /* padding: 100px 100px 600px 100px; */
+}
+
+.menu__link {
     margin-right: 30px;
 }
 
-.menu__item a::before,
+li a::before,
 .footer__menu-item a::before {
     content: '';
     bottom: 0;
@@ -119,7 +127,7 @@ body{
     transform: scaleX(0);
 }
 
-.menu__item a:hover::before,
+li a:hover::before,
 .footer__menu-item a:hover::before {
     transform: scaleX(1);
 }
@@ -134,6 +142,10 @@ body{
 .menu__link:hover{
     color:#F04B5F;
 }
+
+/* ---------------- */
+
+
 
 .phone {
     font-size: 24px;
@@ -675,44 +687,6 @@ position: relative;
     display: none;
 }
 
-/*------------------*/
-
-.menu-btn {
-    display: none;
-    width: 40px;
-    padding: 0;
-    position: relative;
-    z-index: 20;
-    height: 30px;
-}
-
-.menu-btn span {
-    display: block;
-    height: 2px;
-    background-color: #fff;
-    position: relative;
-}
-
-.menu-btn span::before,
-.menu-btn span::after {
-    content: '';
-    width: 40px;
-    height: 2px;
-    background-color:#fff;
-    position: absolute;
-    left: 0;
-}
-
-.menu-btn span::before {
-    top: -10px;
-}
-
-.menu-btn span::after {
-    top: 10px;
-}
-
-/*------------------*/
-
 @media (max-width: 1160px){
     .about {
         text-align: center;
@@ -791,40 +765,99 @@ position: relative;
     }
 }
 
+
+/*------------------*/
+
+.header__byrger {
+    display: none;
+}
+
+/*------------------*/
+
 @media (max-width: 895px) {
+    body.lock{
+        overflow: hidden;
+    }
+
     .header__top {
         padding-top: 30px;
     }
 
-    .menu-btn {
-        display: block;
-    }
+    /* бургер меню */
 
-    .menu__list {
-        transform: translateY(-150%);
+    .menu {
         transition: all .5s;
         display: block;
         position: absolute;
-        top: 0;
+        top:-500px;
         left: 0;
         right: 0;
-        background-color: #010203;
+        /* background-color: #010203; */
+        background-image: url(../images/s7.jpg);
+        background-size: cover;
+        background-repeat:no-repeat;
+        background-position: top center;
         padding-top: 90px;
         padding-bottom: 30px;
         width: 100%;
         text-align: center;
+        opacity: 0.9
     }
 
-    .menu__list.active {
-        transform: translateY(0);
-    }
-
-    .menu__item {
-        padding: 15px 0;
-    }
-
-    .menu__link {
+    .header__byrger {
         display: block;
+        width: 30px;
+        height: 20px;
+        padding: 0;
+        position: relative;
+        z-index: 20;
+    }
+
+    .header__byrger span {
+        display: block;
+        height: 2px;
+        background-color: #fff;
+        position: relative;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header__byrger::before,
+    .header__byrger::after {
+        content: '';
+        background-color: #fff;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header__byrger::before {
+        top: 0;
+    }
+
+    .header__byrger::after {
+        bottom: 0;
+    }
+
+    .header__byrger.active span {
+        transform: scale(0);
+    }
+
+    .header__byrger.active::before {
+        transform:rotate(45deg);
+        top: 9px;
+    }
+
+    .header__byrger.active::after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+
+    /*------------------*/
+
+    li{
+        padding: 15px 0;
     }
 
     .phone,
