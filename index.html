@@ -7,7 +7,7 @@
   <title>Space Tourism</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/slick.css">
-  <link rel="stylesheet" href="css/jquery.fancybox.css">
+  <!-- <link rel="stylesheet" href="css/jquery.fancybox.css"> -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="images/favicon.ico"/> 
 </head>
@@ -21,11 +21,11 @@
           </button>
           <nav class="menu"> 
             <ul class="menu__list">
-              <li><a class="menu__link" href="#one">О НАС </a></li>
-              <li><a class="menu__link" href="#two">СХЕМА</a></li>
-              <li><a class="menu__link" href="#three">СТОИМОСТЬ</a></li>
-              <li><a class="menu__link" href="#four">ДОП. УСЛУГИ</a></li>
-              <li><a class="menu__link" href="#five">ГАРАНТИИ</a></li>
+              <li><a data-goto=".about"    class="menu__link" href="#">О НАС </a></li>
+              <li><a data-goto=".how__to"  class="menu__link" href="#">СХЕМА</a></li>
+              <li><a data-goto=".to-book"  class="menu__link" href="#">ЗАБРОНИРОВАТЬ</a></li>
+              <li><a data-goto=".info"     class="menu__link" href="#">СТОИМОСТЬ</a></li>
+              <li><a data-goto=".contacts" class="menu__link" href="#">КОНТАКТЫ</a></li>
             </ul>
           </nav>
           <a class="phone" href="tel:080000000000">0 800 000 000 00</a>
@@ -62,14 +62,13 @@
     </div>
   </header>
   <main class="main">
-    <section class="about">
+    <section class="about" id="one">
       <div class="container">
-        <h2 class="title" id="one">
+        <h2 class="title" >
           О нас
         </h2>
         <div class="about__item">
           <img class="adout__img" src="images/branson-men.jpg" alt="branson">
-          <!-- <img class="adout__img" src="images/virgin.jpg" alt="branson"> -->
           <div class="about__content virgin">
             <h3 class="about__content-title">
               Virgin Galactic
@@ -315,7 +314,7 @@
         </div>
       </div>
     </section>
-    <section class="to-book">
+    <section class="to-book" id="three">
       <div class="container">
         <div class="to-book__inner">
           <h2 class="title to-book__title">Успей <br> забронировать!</h2>
@@ -327,7 +326,7 @@
         </div>
       </div>
     </section>
-    <section class="info" id="three">
+    <section class="info" id="four">
       <div class="special-offer">
         <div class="container">
           <h2 class="title">Спец <br>
@@ -365,7 +364,7 @@
           </div>
         </div>
       </div>
-      <div class="services" id="four">
+      <div class="services">
         <div class="container">
           <h2 class="title services__title">
             Дополнительные <br> услуги
@@ -439,7 +438,7 @@
                 <img class="slider__box-img" src="images/blue5.jpg" alt="">
               </div>
               <div class="slider__box-item">
-                <img class="slider__box-img" src="images/SpaceX.jpg" alt="">
+                <img class="slider__box-img" src="images/spacex.jpg" alt="">
               </div>
               <div class="slider__box-item">
                 <img class="slider__box-img" src="images/SpaceX 1.jpg" alt="">
@@ -461,7 +460,7 @@
         </div>
       </div>
     </section>
-    <section class="contacts">
+    <section class="contacts" id="five">
       <div class="container">
         <div class="contacts__inner">
           <div class="contacts__box">
@@ -478,7 +477,7 @@
               <button class="button contacts__btn" type="submit">ЗАБРОНИРОВАТЬ ПОЛЕТ</button>
             </form>
           </div>
-          <div class="contacts__guarantees" id="five">
+          <div class="contacts__guarantees">
             <h2 class="title contacts__title">
               Гарантии
             </h2>
@@ -507,9 +506,9 @@
         <ul class="footer__menu">
           <li class="footer__menu-item"><a class="footer__menu-link" href="#one">О НАС </a></li>
           <li class="footer__menu-item"><a class="footer__menu-link" href="#two">СХЕМА</a></li>
-          <li class="footer__menu-item"><a class="footer__menu-link" href="#three">СТОИМОСТЬ</a></li>
-          <li class="footer__menu-item"><a class="footer__menu-link" href="#four">ДОП. УСЛУГИ</a></li>
-          <li class="footer__menu-item"><a class="footer__menu-link" href="#five">ГАРАНТИИ</a></li>
+          <li class="footer__menu-item"><a class="footer__menu-link" href="#three">ЗАБРОНИРОВАТЬ</a></li>
+          <li class="footer__menu-item"><a class="footer__menu-link" href="#four">СТОИМОСТЬ</a></li>
+          <li class="footer__menu-item"><a class="footer__menu-link" href="#five">КОНТАКТЫ</a></li>
           
           </ul>
         <ul class="footer__links">
