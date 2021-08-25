@@ -1,12 +1,5 @@
-// $(document).ready(function() {
-//     $('.header__byrger').click( function(event){
-//         $('.header__byrger,.menu').toggleClass('active');
-//         $('body').toggleClass('lock');
-//     });
-// });
-
-
 // Меню бургер
+
 const iconMenu = document.querySelector('.header__byrger');
 const menuBody = document.querySelector('.menu');
 if(iconMenu){
@@ -18,6 +11,7 @@ if(iconMenu){
 }
 
 // Прокрутка при клике
+
 const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
 if (menuLinks.length > 0) {
 	menuLinks.forEach(menuLink => {
@@ -50,12 +44,5 @@ $(function(){
         prevArrow: '<img class="slider__arrow slider__arrow-left" src="images/arrow-left.svg" alt="arrow-left">',
         nextArrow: '<img class="slider__arrow slider__arrow-right" src="images/arrow-right.svg" alt="arrow-right">',
     });
-
-    // $('.header__byrger').on('click', function(){
-    //  $('.header__byrger, .menu').toggleClass('active');
-    //     $('.menu').slideToggle(30);
-
-    // });
-
 });
 
