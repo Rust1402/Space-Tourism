@@ -11,7 +11,7 @@ const iconMenu = document.querySelector('.header__byrger');
 const menuBody = document.querySelector('.menu');
 if(iconMenu){
     iconMenu.addEventListener("click", function(e) {
-        // document.body.classList.toggle('lock');
+        document.body.classList.toggle('lock');
         iconMenu.classList.toggle('active');
         menuBody.classList.toggle('active');
     });
@@ -28,7 +28,7 @@ if (menuLinks.length > 0) {
 		const menuLink = e.target;
 		if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
 			const gotoBlock = document.querySelector(menuLink.dataset.goto);
-			const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset + document.querySelector('.menu__list').offsetHeight;
+			const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset + document.querySelector('.header__top').offsetHeight;
 
 			if (iconMenu.classList.contains('active')) {
 				document.body.classList.remove('lock');
