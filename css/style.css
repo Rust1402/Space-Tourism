@@ -106,7 +106,8 @@ body{
 }
 
 .menu.active {
-    top: 0; 
+    top: 0;
+    /* padding: 100px 100px 600px 100px; */
 }
 
 .menu__link {
@@ -143,6 +144,8 @@ li a:hover::before,
 }
 
 /* ---------------- */
+
+
 
 .phone {
     font-size: 24px;
@@ -505,8 +508,8 @@ foreignObject {
 }
 
 .services__btn--first {
-    margin-bottom: 50px;
-    position: relative;
+margin-bottom: 50px;
+position: relative;
 }
 
 .services__btn--first::before {
@@ -634,6 +637,7 @@ foreignObject {
     background-repeat:no-repeat;
     background-position: top center;
     padding: 100px 0 150px;
+    overflow: hidden;
 }
 
 .footer__inner {
@@ -742,6 +746,7 @@ foreignObject {
         margin: 0 auto;
     }
 
+
     .blue,
     .virgin,
     .spacex,
@@ -776,8 +781,8 @@ foreignObject {
 
 /*------------------*/
 
-    .header__byrger {
-        display: none;
+.header__byrger {
+    display: none;
 }
 
 /*------------------*/
@@ -799,11 +804,14 @@ foreignObject {
         top:-1100px;
         left: 0;
         right: 0;
+        /* background-color: #010203; */
         background-image: url(../images/s7.jpg);
         background-size: cover;
         background-repeat:no-repeat;
         background-position: top center;
-        padding: 100px 100px 600px 100px;       
+        padding: 100px 100px 600px 100px;
+        /* padding-top: 90px;
+        padding-bottom: 30px; */
         width: 100%;
         text-align: center;
         opacity: 0.9
