@@ -460,6 +460,7 @@ foreignObject {
 
 .services {
     padding-bottom: 200px;
+    overflow: hidden;
 }
 
 .services__inner {
